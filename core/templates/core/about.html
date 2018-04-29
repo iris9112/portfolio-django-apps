@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block header %}
+<h1>Acerca de</h1>
+<h4 class="subheading">Biografía</h4>
+{% endblock %}
+
+{% block content %}
+<div class="row"> 
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.png' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Dime Isa</h2>   
+        <p>Nací en Cali, Valle del Cauca, aunque mi madre registro como lugar de nacimiento El Cerrito, Valle, por que las filas en Cali eran más largas. 
+           El amor de mi vida fue mi perro Lucas, vivió diez maravillosos años conmigo, pero no fueron suficientes. El año pasado adopté un gato que se llama Percy,
+           él ama a cualquier persona que no sea yo, a mi solo me muerde, por lo visto el amor no es para mi.
+           Me gusta leer y ver cualquier cosa en netflix, me gustan muchos ritmos de música pero últimamente escucho mucho electrónica y house. Estoy medio obsesionada con un dúo inglés que se llama Gorgon City, su canción
+           <a href="https://www.youtube.com/watch?v=O48hUxxJxS8&index=1&list=RDEM6vAQVB-vrEbT_TCXiCqDXg">Imagination</a> no sale de mi cabeza. <br>
+           Viví mi infancia en diferentes pueblos, mi adolescencia la viví en Tuluá, tengo un especial cariño por la ciudad de Buenaventura, mis papás vivieron en Manizales por 5 años, mientras yo vivia en Bogotá, 
+           y viajaba a visitarlos cada año, ahora ellos regresaron a Tuluá y yo estoy de nuevo en Cali.
+           Me gusta mucho la tecnologia aunque la enfoque mal durante mucho tiempo.
+        </p>
+        <h5>Quiero compartir mi conocimiento y aprender cada día más. ¡Pregúntame lo que sea!</h5>
+    </div>
+</div>
+
+{% endblock %}
