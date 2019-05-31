@@ -1,0 +1,26 @@
+#################################################################
+# mostrar migraciones
+------------------------------------------------------------------
+
+python manage.py showmigrations
+
+#################################################################
+# resetear migraciones
+------------------------------------------------------------------
+
+python manage.py migrate_schemas --fake auth zero
+python manage.py migrate_schemas --fake users zero
+python manage.py migrate_schemas --fake-initial
+
+
+python manage.py migrate --fake account zero
+python manage.py migrate --fake admin zero
+python manage.py migrate --fake auth zero
+python manage.py migrate --fake common zero
+python manage.py migrate --fake contenttypes zero
+python manage.py migrate --fake django_db_logger zero
+python manage.py migrate --fake sessions zero
+python manage.py migrate --fake silver zero
+python manage.py migrate --fake socialaccount zero
+python manage.py migrate --fake utils zero
+
