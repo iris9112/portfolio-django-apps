@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Bienvenidos
+{% endblock page_title %}
+
+{% block content %}
+
+<h1>Bienvenido</h1>
+
+<p>Selecciona que cliente quieres visitar:</p>
+
+    {% for client in tenants %}
+        <p><a href='http://{{client.domain_url}}:8000'>{{client.name}}</a></p>
+    {% empty %}
+        <p>No tenemos clientes</p>
+    {% endfor %}
+
+{% endblock %}

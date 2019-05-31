@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Bienvenidos
+{% endblock page_title %}
+
+{% block content %}
+    <h1>Bienvenido <span style="color:blue">{{request.user.username}}</span> a la Tienda de {{request.tenant.schema_name}}</h1>
+
+    <p><a href="{% url 'notes:listview_notes' %}">Para ver las notas pulsa aquí</a></p>
+    <br>
+    <p><a href="{% url 'notes:create_note' %}">Para crear una nota pulsa aquí</a></p>
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <h2>Bienvenido</h2>
+          <p>Por favor inicia sesión para continuar</p>
+          <form method="post" enctype="multipart/form-data" class="form-horizontal">
+            {% csrf_token %}
+            
+                {% bootstrap_form form layout="horizontal" %}
+                <center>{% bootstrap_button "Log in" button_type="submit" button_class="btn-primary" %}</center>
+            
+                <a href="{% url 'password_reset' %}" class="btn btn-link">Forgot your password?</a>
+                {% bootstrap_form_errors form layout='inline' %}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

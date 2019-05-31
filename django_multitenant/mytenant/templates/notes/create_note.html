@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+
+{% block page_title %}
+    Bienvenidos
+{% endblock page_title %}
+
+{% block breadcrumb %}
+    <!-- listado de urls desde index -->
+    <li class="active">
+        <strong><a href="#">Crear nota</a></strong>
+    </li>
+{% endblock %} 
+
+{% block content %}
+<h2>Crear nota</h2>
+
+<form method="post"  enctype="multipart/form-data" class="form-horizontal" >
+{% csrf_token %}
+    <div class="row">
+        {% bootstrap_form form layout="horizontal" %}
+        <center>{% bootstrap_button "Crear nota" button_type="submit" button_class="btn-primary" %}</center>
+    </div>
+    {% bootstrap_form_errors form layout='inline' %}
+</form>
+
+{% endblock content %}
